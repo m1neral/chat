@@ -8,7 +8,11 @@ gem 'pg'
 gem 'redis', '~> 3.0'
 
 gem 'sass-rails', '~> 5.0'
+gem 'bootstrap-sass'
 gem 'haml-rails'
+
+gem 'devise'
+gem 'omniauth-vkontakte'
 
 gem 'jbuilder', '~> 2.5'
 

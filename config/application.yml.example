@@ -1,0 +1,11 @@
+development:
+  db_name: chat_dev
+  db_host: localhost
+  oauth_vk_app_id: 7777777
+  oauth_vk_app_secret: xxxx12345xxxx123xXXXxx
+
+test:
+  db_name: chat_test
+
+production:
+  db_name: chat_prod

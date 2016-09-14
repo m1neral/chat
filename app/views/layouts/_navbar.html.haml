@@ -1,0 +1,11 @@
+%nav.navbar.navbar-default
+  .container
+    .navbar-header
+      = link_to 'Chat', dialogs_path, class: 'navbar-brand'
+    .collapse.navbar-collapse.navbar-ex1-collapse
+      %ul.nav.navbar-nav.navbar-right
+        - if user_signed_in?
+          %p.navbar-text Signed in as #{current_user.name}
+          %li= link_to 'Sign out', destroy_user_session_path, method: :delete
+        - else
+          %li= link_to 'Sign up from VK', user_vkontakte_omniauth_authorize_path
