@@ -20,6 +20,8 @@ gem 'figaro'
 
 gem 'rails_12factor', group: :production
 
+gem 'pry-rails'
+
 group :development do
   gem 'listen'
   gem 'pry-byebug'

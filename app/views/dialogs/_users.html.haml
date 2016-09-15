@@ -1,0 +1,6 @@
+.col-xs-8.col-md-offset-2
+  %h3 Dialogs
+  %ul.list-group
+    - locals[:users].each do |user|
+      %li.list-group-item
+        = link_to(user.name, user)
