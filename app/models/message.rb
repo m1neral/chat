@@ -4,7 +4,9 @@ class Message < ApplicationRecord
 
   validates :text, presence: true, length: { minimum: 1 }
 
-  def self.get_dialog(sender_id, receiver_id)
-    where(sender_id: sender_id, receiver_id: receiver_id).or(where(sender_id: receiver_id, receiver_id: sender_id))
+  def self.get_dialog(sender, receiver)
+    where(sender_id: sender.id, receiver_id: receiver.id)
+      .or(where(sender_id: receiver.id, receiver_id: sender.id))
+      .includes(:sender, :receiver)
   end
 end

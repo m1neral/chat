@@ -14,7 +14,7 @@ gem 'haml-rails'
 gem 'devise'
 gem 'omniauth-vkontakte'
 
-gem 'jbuilder', '~> 2.5'
+gem 'active_model_serializers'
 
 gem 'figaro'
 
