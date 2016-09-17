@@ -1,2 +1,4 @@
 .col-xs-8.col-md-offset-2
   %h4 Dialog with #{@receiver.name}
+  = react_component('Dialog', messages: @dialog)
+  = render 'messages/form', locals: { receiver: @receiver }

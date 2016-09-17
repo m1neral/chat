@@ -2,6 +2,8 @@ class Message < ApplicationRecord
   belongs_to :sender, class_name: 'User'
   belongs_to :receiver, class_name: 'User'
 
+  alias_attribute :dialog_id, :receiver_id
+
   validates :text, presence: true, length: { minimum: 1 }
 
   def self.get_dialog(sender, receiver)

@@ -11,6 +11,10 @@ gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass'
 gem 'haml-rails'
 
+gem 'react-rails'
+gem 'sprockets'
+gem 'sprockets-es6'
+
 gem 'devise'
 gem 'omniauth-vkontakte'
 

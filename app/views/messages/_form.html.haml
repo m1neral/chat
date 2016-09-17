@@ -1,0 +1,4 @@
+= form_for :message, url: dialog_messages_path(locals[:receiver]),
+    remote: true, authenticity_token: true, html: { class: 'form-group', id: 'message-form' } do |f|
+  = f.text_area :text, placeholder: 'Enter your message here...', class: 'form-control', data: { textarea: 'message' }
+  = f.submit 'Send', id: 'submit-form-el', class: 'btn btn-primary',  data: { send: 'message' }

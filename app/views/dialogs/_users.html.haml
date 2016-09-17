@@ -1,9 +1,6 @@
 .col-xs-8.col-md-offset-2
   %h3 Dialogs
-  - if flash[:sign_up_warning]
-    .alert.alert-warning{role: 'alert'}
-      %span.glyphicon.glyphicon-exclamation-sign{'aria-hidden' => 'true'}
-      =flash[:sign_up_warning]
+  = render 'layouts/notification'
   %ul.list-group
     - locals[:users].each do |user|
       %li.list-group-item
