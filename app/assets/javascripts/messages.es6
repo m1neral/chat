@@ -5,6 +5,7 @@ window.onload = () => {
     // Rails assets--view problem
     if (!form) { return; }
 
+    const messagesBlock = document.getElementById('messages-block-el');
     const messageInput = document.getElementById('message_text');
     const submitBtn = document.getElementById('submit-form-el');
 
@@ -17,6 +18,8 @@ window.onload = () => {
         messageInput.focus();
     };
 
-    messageInput.onkeypress = e => (e.key === 'Enter') ? e.preventDefault() | submitForm() : true;
+    messageInput.onkeypress = e => (e.keyCode === 13) ? e.preventDefault() | submitForm() : true;
     submitBtn.addEventListener('click', e => e.preventDefault() | submitForm());
+
+    messagesBlock.scrollTop = messagesBlock.scrollHeight;
 };
